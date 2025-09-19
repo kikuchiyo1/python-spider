@@ -1,0 +1,4 @@
+QB_URL=http://127.0.0.1:8080
+USERNAME=kikuchiyo
+PASSWORD=114514
+SAVE_PATH=D:/番剧
