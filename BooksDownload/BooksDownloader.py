@@ -125,10 +125,10 @@ class NovelGetter:
 
     #合并章节
     def merge_chapters(self,novel_title: str):
-        os.makedirs(novel_title, exist_ok=True)
         files = [f for f in os.listdir(novel_title) if f.endswith('.txt')]
         files.sort()
-        with open(f"{novel_title}_full.txt",'w',encoding='utf-8') as f_out:
+        output_path = os.path.join(novel_title, f"{novel_title}_全文.txt")
+        with open(output_path,'w',encoding='utf-8') as f_out:
             for file in files:
                 with open(os.path.join(novel_title,file), 'r', encoding='utf-8') as f_in:
                     f_out.write(f_in.read()+"\n\n")
